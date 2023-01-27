@@ -3,13 +3,19 @@ import AVFoundation
 
 class XilophoneButtons: UIView {
     
+    //MARK: - let/var
+    
     private let dictanseEdgesButton: CGFloat = 10
     private let cornerRadiusButton: CGFloat = 15
     private let fontSizeButton: CGFloat = 50
     
     private var buttons: [UIButton] = []
     
+    var timerAlphaButton = Timer()
+    
     var player: AVAudioPlayer!
+    
+    //MARK: - lifecicle/funcs
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,9 +31,11 @@ class XilophoneButtons: UIView {
     }
     
     private func setupButtons() {
+        
         for button in buttons {
             self.addSubview(button)
         }
+        
     }
     
     private func setButtons() {
@@ -40,14 +48,19 @@ class XilophoneButtons: UIView {
             button.setTitle(titleButtons[index], for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: fontSizeButton)
             button.tintColor = .white
-            button.addTarget(self, action: #selector(keyPressed), for: .touchUpInside)
+            button.addTarget(self, action: #selector(keyPressed), for: .touchDown)
             button.translatesAutoresizingMaskIntoConstraints = false
             buttons.append(button)
         }
     }
     
     @IBAction func keyPressed(_ sender: UIButton) {
+        
+        sender.alpha = 0.5
         playSound((sender.titleLabel?.text)!)
+        timerAlphaButton = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { _ in
+            sender.alpha = 1
+        })
         }
         
     func playSound(_ nameButton: String) {
@@ -58,6 +71,8 @@ class XilophoneButtons: UIView {
         }
 
 }
+
+//MARK: - Set constraints
 
 extension XilophoneButtons {
     
