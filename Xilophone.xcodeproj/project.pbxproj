@@ -10,9 +10,9 @@
 		168E8BD329834EE800D51840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8BD229834EE800D51840 /* AppDelegate.swift */; };
 		168E8BD529834EE800D51840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8BD429834EE800D51840 /* SceneDelegate.swift */; };
 		168E8BD729834EE800D51840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8BD629834EE800D51840 /* ViewController.swift */; };
-		168E8BDA29834EE800D51840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168E8BD829834EE800D51840 /* Main.storyboard */; };
 		168E8BDC29834EEA00D51840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168E8BDB29834EEA00D51840 /* Assets.xcassets */; };
 		168E8BDF29834EEA00D51840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168E8BDD29834EEA00D51840 /* LaunchScreen.storyboard */; };
+		168E8BE9298350AF00D51840 /* XilophoneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E8BE8298350AF00D51840 /* XilophoneButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		168E8BD229834EE800D51840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		168E8BD429834EE800D51840 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		168E8BD629834EE800D51840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		168E8BD929834EE800D51840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		168E8BDB29834EEA00D51840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		168E8BDE29834EEA00D51840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		168E8BE029834EEA00D51840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		168E8BE8298350AF00D51840 /* XilophoneButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XilophoneButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				168E8BD229834EE800D51840 /* AppDelegate.swift */,
 				168E8BD429834EE800D51840 /* SceneDelegate.swift */,
+				168E8BE8298350AF00D51840 /* XilophoneButtons.swift */,
 				168E8BD629834EE800D51840 /* ViewController.swift */,
-				168E8BD829834EE800D51840 /* Main.storyboard */,
 				168E8BDB29834EEA00D51840 /* Assets.xcassets */,
 				168E8BDD29834EEA00D51840 /* LaunchScreen.storyboard */,
 				168E8BE029834EEA00D51840 /* Info.plist */,
@@ -127,7 +127,6 @@
 			files = (
 				168E8BDF29834EEA00D51840 /* LaunchScreen.storyboard in Resources */,
 				168E8BDC29834EEA00D51840 /* Assets.xcassets in Resources */,
-				168E8BDA29834EE800D51840 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +139,7 @@
 			files = (
 				168E8BD729834EE800D51840 /* ViewController.swift in Sources */,
 				168E8BD329834EE800D51840 /* AppDelegate.swift in Sources */,
+				168E8BE9298350AF00D51840 /* XilophoneButtons.swift in Sources */,
 				168E8BD529834EE800D51840 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		168E8BD829834EE800D51840 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				168E8BD929834EE800D51840 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		168E8BDD29834EEA00D51840 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +284,7 @@
 				INFOPLIST_FILE = Xilophone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +292,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = IK.Xilophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +313,7 @@
 				INFOPLIST_FILE = Xilophone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +321,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = IK.Xilophone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
