@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class XilophoneButtons: UIView {
     
@@ -7,6 +8,8 @@ class XilophoneButtons: UIView {
     private let fontSizeButton: CGFloat = 50
     
     private var buttons: [UIButton] = []
+    
+    var player: AVAudioPlayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,10 +40,23 @@ class XilophoneButtons: UIView {
             button.setTitle(titleButtons[index], for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: fontSizeButton)
             button.tintColor = .white
+            button.addTarget(self, action: #selector(keyPressed), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
             buttons.append(button)
         }
     }
+    
+    @IBAction func keyPressed(_ sender: UIButton) {
+        playSound((sender.titleLabel?.text)!)
+        }
+        
+    func playSound(_ nameButton: String) {
+            let url = Bundle.main.url(forResource: nameButton, withExtension: "wav")
+            player = try! AVAudioPlayer(contentsOf: url!)
+            player.play()
+                    
+        }
+
 }
 
 extension XilophoneButtons {
