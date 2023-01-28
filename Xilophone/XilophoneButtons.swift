@@ -61,15 +61,15 @@ class XilophoneButtons: UIView {
         timerAlphaButton = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false, block: { _ in
             sender.alpha = 1
         })
-        }
-        
+    }
+    
     func playSound(_ nameButton: String) {
-            let url = Bundle.main.url(forResource: nameButton, withExtension: "wav")
-            player = try! AVAudioPlayer(contentsOf: url!)
-            player.play()
-                    
-        }
-
+        let url = Bundle.main.url(forResource: nameButton, withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+        
+    }
+    
 }
 
 //MARK: - Set constraints
